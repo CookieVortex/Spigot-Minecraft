@@ -1,0 +1,17 @@
+name: FirstPluginTest
+version: '${project.version}'
+main: Spigot.FirstPluginTest
+api-version: 1.19
+
+commands:
+  spawnZombie:
+    aliases:
+      - zombie
+  spawnSkeleton:
+    aliases:
+      - skeleton
+      -
+  creative:
+    description: Gamemode Creative
+  survival:
+    description: Gamemode Survival
