@@ -1,6 +1,3 @@
-# Spigot-Java-v1.0
-Creating plugins
-
 # Added:
 
 ## - Permissions (Creative, Survival)
