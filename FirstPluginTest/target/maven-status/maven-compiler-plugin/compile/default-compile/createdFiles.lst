@@ -1,5 +1,6 @@
-Spigot\permission\Survival.class
+Spigot\world\Weather.class
 Spigot\permission\Creative.class
+Spigot\permission\Survival.class
 Spigot\FirstPluginTest.class
 Spigot\entity\SpawnCommand.class
 Spigot\entity\SpawnCommandSecond.class

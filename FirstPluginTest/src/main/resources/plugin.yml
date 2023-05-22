@@ -12,6 +12,6 @@ commands:
       - skeleton
       -
   creative:
-    description: Gamemode Creative
+    description: Game mode Creative
   survival:
-    description: Gamemode Survival
+    description: Game mode Survival
