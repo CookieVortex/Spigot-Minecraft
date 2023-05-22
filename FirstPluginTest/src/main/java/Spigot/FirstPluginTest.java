@@ -5,6 +5,7 @@ import Spigot.entity.SpawnCommandSecond;
 import Spigot.permission.Creative;
 import Spigot.permission.Survival;
 import Spigot.world.Weather;
+import org.bukkit.World;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
@@ -21,6 +22,9 @@ public final class FirstPluginTest extends JavaPlugin implements Listener {
         Objects.requireNonNull(getCommand("Survival")).setExecutor(new Survival());
         Objects.requireNonNull(getCommand("Creative")).setExecutor(new Creative());
         Objects.requireNonNull(getCommand("Weather")).setExecutor(new Weather());
+
+        World world = getServer().getWorlds().get(0);
+        world.setTime(1000);
 
     }
 
