@@ -2,15 +2,13 @@ package Spigot;
 
 import Spigot.entity.SpawnCommand;
 import Spigot.entity.SpawnCommandSecond;
-import Spigot.permission.Creative;
-import Spigot.permission.Survival;
+import Spigot.permission.MyEventListener;
 import Spigot.world.Weather;
 import org.bukkit.World;
-import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.List;
 import java.util.Objects;
 
 public final class FirstPluginTest extends JavaPlugin implements Listener {
@@ -19,22 +17,17 @@ public final class FirstPluginTest extends JavaPlugin implements Listener {
     public void onEnable() {
         Objects.requireNonNull(getCommand("spawnZombie")).setExecutor(new SpawnCommand());
         Objects.requireNonNull(getCommand("spawnSkeleton")).setExecutor(new SpawnCommandSecond());
-        Objects.requireNonNull(getCommand("Survival")).setExecutor(new Survival());
-        Objects.requireNonNull(getCommand("Creative")).setExecutor(new Creative());
         Objects.requireNonNull(getCommand("Weather")).setExecutor(new Weather());
+        getServer().getPluginManager().registerEvents(new MyEventListener(this), this);
 
-        World world = getServer().getWorlds().get(0);
-        world.setTime(1000);
+        List<World> worlds = getServer().getWorlds();
+        if (!worlds.isEmpty()) {
+            World world = worlds.get(0);
+            world.setTime(1000);
+            world.setClearWeatherDuration(5000);
+        } else {
+            getLogger().warning("No worlds found.");
+        }
 
-    }
-
-    @EventHandler
-    public void handeJoin(PlayerJoinEvent event) {
-
-    }
-
-    @Override
-    public void onDisable() {
-        // Plugin shutdown logic
     }
 }

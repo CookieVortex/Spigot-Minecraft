@@ -14,6 +14,7 @@ public class Weather implements CommandExecutor {
             Player player = (Player) sender;
             if (player.isOnline()) {
                 Objects.requireNonNull(player.getLocation().getWorld()).setTime(1000);
+                Objects.requireNonNull(player.getLocation().getWorld()).setClearWeatherDuration(5000);
             }
 
         }
