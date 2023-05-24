@@ -12,7 +12,7 @@ public class Weather implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (sender instanceof Player) {
             Player player = (Player) sender;
-            if (player.isOnline()) {
+            if (player.isOnline())  {
                 Objects.requireNonNull(player.getLocation().getWorld()).setTime(1000);
                 Objects.requireNonNull(player.getLocation().getWorld()).setClearWeatherDuration(5000);
             }

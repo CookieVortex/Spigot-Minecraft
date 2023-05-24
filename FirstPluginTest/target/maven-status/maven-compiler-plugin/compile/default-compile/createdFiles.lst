@@ -1,5 +1,6 @@
-Spigot\permission\MyEventListener.class
 Spigot\world\Weather.class
+Spigot\permission\PermissionTag.class
 Spigot\FirstPluginTest.class
+Spigot\entity\onPlayerJoin.class
 Spigot\entity\SpawnCommand.class
 Spigot\entity\SpawnCommandSecond.class
