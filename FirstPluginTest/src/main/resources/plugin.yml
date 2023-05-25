@@ -10,10 +10,8 @@ commands:
   spawnSkeleton:
     aliases:
       - skeleton
-  creative:
-    description: Game mode Creative
-  survival:
-    description: Game mode Survival
   weather:
     description: Set the time to 1000
     usage: /weather
+  sb:
+    description: Open ScoreBoard

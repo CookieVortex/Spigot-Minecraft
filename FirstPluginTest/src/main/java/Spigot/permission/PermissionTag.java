@@ -1,7 +1,6 @@
 package Spigot.permission;
 
 import org.bukkit.ChatColor;
-import org.bukkit.GameMode;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -20,13 +19,10 @@ public class PermissionTag implements Listener {
         Player player = event.getPlayer();
         String message = event.getMessage();
 
-        if (player.hasPermission("Creative")) {
+        if (player.hasPermission("op")) {
             event.setFormat(ChatColor.RED + "[Admin] " + ChatColor.WHITE + player.getDisplayName() + ": " + message);
-            player.setGameMode(GameMode.CREATIVE);
         } else {
             event.setFormat(ChatColor.DARK_GRAY + "[Survival] " + ChatColor.WHITE + player.getDisplayName() + ": " + message);
-            player.setGameMode(GameMode.SURVIVAL);
         }
-
     }
 }

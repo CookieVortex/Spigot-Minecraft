@@ -1,6 +1,7 @@
 Spigot\world\Weather.class
+Spigot\commands\OpenScoreboardCommand.class
 Spigot\permission\PermissionTag.class
+Spigot\entity\SpawnSkeleton.class
+Spigot\entity\SpawnZombie.class
 Spigot\FirstPluginTest.class
 Spigot\entity\onPlayerJoin.class
-Spigot\entity\SpawnCommand.class
-Spigot\entity\SpawnCommandSecond.class
