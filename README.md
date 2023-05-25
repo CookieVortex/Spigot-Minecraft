@@ -19,3 +19,13 @@ Changed the vanilla way of sending messages to the chat:
 On the:
 
 [Permission Tag] Nickname: Message
+
+## - Commands
+
+When entering a command in the chat /sb, a table is displayed on the right, which already has:
+
+Player name
+Player Biome
+Number of players online
+
+Fixed a bug with fuzzy weather setting
