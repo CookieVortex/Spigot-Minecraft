@@ -20,12 +20,20 @@ On the:
 
 [Permission Tag] Nickname: Message
 
-## - Commands
+## - ScoreBoard
 
-When entering a command in the chat /sb, a table is displayed on the right, which already has:
+Now you do not need to update the table every time to get updated data, now everything happens automatically and is updated every tick (1 second divided by 20).
 
-Player name
-Player Biome
-Number of players online
+Updated statistics show the number of blocks destroyed (all types)
 
-Fixed a bug with fuzzy weather setting
+Amount of damage dealt to creatures
+
+Number of monsters killed
+
+Number of player deaths
+
+Time played on the server (in minutes or hours)
+
+Player Level
+
+Ping of the player (I could not check, because I play through the localhost)

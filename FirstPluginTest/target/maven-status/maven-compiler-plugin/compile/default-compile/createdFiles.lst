@@ -1,3 +1,4 @@
+Spigot\FirstPluginTest$ScoreboardUpdater.class
 Spigot\world\Weather.class
 Spigot\commands\OpenScoreboardCommand.class
 Spigot\permission\PermissionTag.class
