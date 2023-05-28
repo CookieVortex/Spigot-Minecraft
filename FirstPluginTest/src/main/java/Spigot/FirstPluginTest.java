@@ -32,7 +32,7 @@ public final class FirstPluginTest extends JavaPlugin implements Listener {
                 ScoreboardUpdater scoreboardUpdater = new ScoreboardUpdater(player);
                 scoreboardUpdater.run();
             }
-        }, 0, 0);
+        }, 0, 20);
     }
 
     private static class ScoreboardUpdater implements Runnable {
