@@ -5,7 +5,6 @@ Both classes are separated from each other and have different tags in different 
 
 Reduced the amount of code and now everything is in one file instead of two.
 Update permission file.
-Bugs fix.
 
 ## - Entity
 Added ability to spawn entity: Zombie and Skeleton. Both classes have buffs relative to vanilla.
@@ -33,3 +32,7 @@ Added a rank system. Upon reaching a certain level, you get buffs (infinite dura
 
 Removed unnecessary counters, left the most necessary.
 Improved code readability, now everything is in its own method
+
+## - Hologram
+
+Hologram plugin that adds a hologram to the server by installing it at the player's location, as well as the ability to remove all holograms from the server

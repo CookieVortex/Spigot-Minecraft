@@ -1,6 +1,8 @@
 package Spigot;
 
+import Spigot.commands.HologramCommand;
 import Spigot.commands.OpenScoreboardCommand;
+import Spigot.commands.RemoveHologramsCommand;
 import Spigot.entity.SpawnSkeleton;
 import Spigot.entity.SpawnZombie;
 import Spigot.entity.onPlayerJoin;
@@ -24,6 +26,9 @@ public final class FirstPluginTest extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new PermissionTag(this), this);
         getServer().getPluginManager().registerEvents(new onPlayerJoin(), this);
         Objects.requireNonNull(getCommand("sb")).setExecutor(new OpenScoreboardCommand());
+        Objects.requireNonNull(getCommand("hologram")).setExecutor(new HologramCommand());
+
+        Objects.requireNonNull(getCommand("removeholograms")).setExecutor(new RemoveHologramsCommand());
 
 
         BukkitScheduler scheduler = Bukkit.getServer().getScheduler();

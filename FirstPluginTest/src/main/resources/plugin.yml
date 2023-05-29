@@ -15,3 +15,7 @@ commands:
     usage: /weather
   sb:
     description: Open ScoreBoard
+  hologram:
+    description: Spawn a hologram
+  removeholograms:
+    description: Remove a hologram

@@ -13,6 +13,8 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
+import java.util.Objects;
+
 
 public class SpawnZombie implements CommandExecutor {
 
@@ -50,13 +52,15 @@ public class SpawnZombie implements CommandExecutor {
             sword.addUnsafeEnchantment(sweepingEdgeEnchantment, 1);
             sword.addUnsafeEnchantment(knockbackEnchantment, 2);
 
-            zombie.getEquipment().setHelmet(helmet);
+            Objects.requireNonNull(zombie.getEquipment()).setHelmet(helmet);
             zombie.getEquipment().setChestplate(chestplate);
             zombie.getEquipment().setLeggings(leggings);
             zombie.getEquipment().setBoots(boots);
             zombie.getEquipment().setItemInMainHand(sword);
             return true;
+
         }
+
         return true;
     }
 }

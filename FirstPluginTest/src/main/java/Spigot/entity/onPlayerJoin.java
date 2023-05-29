@@ -17,20 +17,16 @@ public class onPlayerJoin implements Listener {
         world.setStorm(false);
         world.setThundering(false);
         world.setClearWeatherDuration(10000000);
-        /*String ipAddress = Objects.requireNonNull(player.getAddress()).getAddress().getHostAddress();*/
         Player player1 = event.getPlayer();
         String online = player1.getPlayerListName();
 
 
         String message = ChatColor.YELLOW + "Welcome, " + player.getName() + "! ";
-        /*message += ChatColor.GRAY + "Your IP address is: " + ipAddress;*/
         String currentonline = "Currently online: " + ChatColor.DARK_GREEN + online;
         String help = "Type" + ChatColor.RED + " /help" + ChatColor.WHITE + " for a list of commands";
-        String scoreboard = "Type" + ChatColor.RED + " /sb" + ChatColor.GREEN + " for a help board";
 
         player.sendMessage(message);
         player1.sendMessage(currentonline);
         player1.sendMessage(help);
-        player1.sendMessage(scoreboard);
     }
 }

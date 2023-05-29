@@ -2,7 +2,9 @@ Spigot\FirstPluginTest$ScoreboardUpdater.class
 Spigot\world\Weather.class
 Spigot\commands\OpenScoreboardCommand.class
 Spigot\permission\PermissionTag.class
+Spigot\commands\HologramCommand.class
 Spigot\entity\SpawnSkeleton.class
 Spigot\entity\SpawnZombie.class
+Spigot\commands\RemoveHologramsCommand.class
 Spigot\FirstPluginTest.class
 Spigot\entity\onPlayerJoin.class

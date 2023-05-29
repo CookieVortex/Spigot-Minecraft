@@ -5,7 +5,6 @@ Both classes are separated from each other and have different tags in different 
 
 Reduced the amount of code and now everything is in one file instead of two.
 Update permission file.
-Bugs fix.
 
 ## - Entity
 Added ability to spawn entity: Zombie and Skeleton. Both classes have buffs relative to vanilla.
@@ -26,14 +25,14 @@ Now you do not need to update the table every time to get updated data, now ever
 
 Updated statistics show the number of blocks destroyed (all types)
 
-Amount of damage dealt to creatures
+Added a rank system. Upon reaching a certain level, you get buffs (infinite duration), the higher the level of the player, the more powerful buffs you get
 
-Number of monsters killed
+Removed unnecessary counters, left the most necessary.
+Added a rank system. Upon reaching a certain level, you get buffs (infinite duration), the higher the level of the player, the more powerful buffs you get
 
-Number of player deaths
+Removed unnecessary counters, left the most necessary.
+Improved code readability, now everything is in its own method
 
-Time played on the server (in minutes or hours)
+## - Hologram
 
-Player Level
-
-Ping of the player (I could not check, because I play through the localhost)
+Hologram plugin that adds a hologram to the server by installing it at the player's location, as well as the ability to remove all holograms from the server
