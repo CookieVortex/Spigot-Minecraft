@@ -19,3 +19,6 @@ commands:
     description: Spawn a hologram
   removeholograms:
     description: Remove a hologram
+  rtp:
+    description: Random Teleport a player
+    usage: /<command>

@@ -2,6 +2,7 @@ package Spigot;
 
 import Spigot.commands.HologramCommand;
 import Spigot.commands.OpenScoreboardCommand;
+import Spigot.commands.RandomTPCommand;
 import Spigot.commands.RemoveHologramsCommand;
 import Spigot.entity.SpawnSkeleton;
 import Spigot.entity.SpawnZombie;
@@ -29,6 +30,7 @@ public final class FirstPluginTest extends JavaPlugin implements Listener {
         Objects.requireNonNull(getCommand("hologram")).setExecutor(new HologramCommand());
 
         Objects.requireNonNull(getCommand("removeholograms")).setExecutor(new RemoveHologramsCommand());
+        Objects.requireNonNull(getCommand("rtp")).setExecutor(new RandomTPCommand());
 
 
         BukkitScheduler scheduler = Bukkit.getServer().getScheduler();
