@@ -1,0 +1,5 @@
+name: ScoreBoardPlugin
+version: '1.0'
+main: me.min.scoreboardplugin.ScoreBoardPlugin
+api-version: 1.19
+config: config.yml
