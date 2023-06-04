@@ -13,12 +13,16 @@ commands:
   weather:
     description: Set the time to 1000
     usage: /weather
-  sb:
-    description: Open ScoreBoard
   hologram:
     description: Spawn a hologram
+  hologram2:
+    description: Spawn a hologram2
   removeholograms:
     description: Remove a hologram
   rtp:
     description: Random Teleport a player
     usage: /<command>
+  findarmorstands:
+    description: None
+  spawn:
+    description: Player teleport to spawn
