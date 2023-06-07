@@ -14,13 +14,13 @@ import org.bukkit.scheduler.BukkitScheduler;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.UUID;
 import java.util.logging.Logger;
 
 
 public final class ScoreBoardPlugin extends JavaPlugin implements Listener {
-
-    private FileConfiguration data;
     private File dataFile;
+    private FileConfiguration data;
 
     @Override
     public void onEnable() {
@@ -38,19 +38,7 @@ public final class ScoreBoardPlugin extends JavaPlugin implements Listener {
 
         data = YamlConfiguration.loadConfiguration(dataFile);
 
-        for (Player player : Bukkit.getOnlinePlayers()) {
-            String playerName = player.getName();
-            int totalExperience = player.getLevel();
-            int level = player.getLevel();
-            int mobKills = player.getStatistic(Statistic.MOB_KILLS);
-            int totalBrokenBlocks = countBrokenBlocks(player);
 
-            data.set("players." + playerName + ".playerName", playerName);
-            data.set("players." + playerName + ".totalExperience", totalExperience);
-            data.set("players." + playerName + ".level", level);
-            data.set("players." + playerName + ".mobKills", mobKills);
-            data.set("players." + playerName + ".totalBrokenBlocks", totalBrokenBlocks);
-        }
         getServer().getPluginManager().registerEvents(this, this);
 
         BukkitScheduler scheduler = Bukkit.getServer().getScheduler();
@@ -71,13 +59,27 @@ public final class ScoreBoardPlugin extends JavaPlugin implements Listener {
     private void updateScoreboard(Player player) {
         OpenScoreboardCommand scoreboardCommand = new OpenScoreboardCommand();
         scoreboardCommand.onCommand(player, null, null, null);
+
     }
 
+
     private void savePlayerData(Player player) {
+
         String playerName = player.getName();
+        UUID uuid = player.getUniqueId();
+        int level = player.getLevel();
+        int mobKills = player.getStatistic(Statistic.MOB_KILLS);
+        int playerKills = player.getStatistic(Statistic.PLAYER_KILLS);
+        int deathsPlayer = player.getStatistic(Statistic.DEATHS);
         int totalBrokenBlocks = countBrokenBlocks(player);
 
-        data.set("players." + playerName + ".totalBrokenBlocks", totalBrokenBlocks);
+        data.set("players." + playerName + ".PlayerName", playerName);
+        data.set("players." + playerName + ".UUID", uuid.toString());
+        data.set("players." + playerName + ".Level", level);
+        data.set("players." + playerName + ".MobKills", mobKills);
+        data.set("players." + playerName + ".PlayerKills", playerKills);
+        data.set("players." + playerName + ".DeathsPlayer", deathsPlayer);
+        data.set("players." + playerName + ".TotalBrokenBlocks", totalBrokenBlocks);
 
         try {
             data.save(dataFile);
